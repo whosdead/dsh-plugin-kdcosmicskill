@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "苍穹开发（ok-cosmic）",
-    "description": "金蝶云苍穹开发 skill 与查询工具：API 知识、表单元数据、基础资料、业务拓展点、代码生成后校验，全部参数可在设置中修改并热更新。"
+    "title": "苍穹开发（dsh-plugin-kdcosmicskill）",
+    "description": "金蝶云苍穹开发 skill（ok-cosmic）与查询工具：API 知识、表单元数据、基础资料、业务拓展点、代码生成后校验，全部参数可在设置中修改并热更新。"
   }
 }

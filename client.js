@@ -1,5 +1,5 @@
 /**
- * dsh-ok-cosmic browser half: the plugin's settings page.
+ * dsh-plugin-kdcosmicskill browser half: the plugin's settings page.
  *
  * The page edits the `ok-cosmic` profile entry through the shared
  * `ctx.configForms` mirror. It is registered both as a Settings section and as
@@ -8,7 +8,7 @@
  * validates the complete Config and the next tool call sees the new values.
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-ok-cosmic',
+  id: 'dsh-plugin-kdcosmicskill',
   factory(require) {
     const { jsx, jsxs } = require('react/jsx-runtime')
     const P = require('@deepseek-ai/dsh-client-ui-primitives')
@@ -537,7 +537,7 @@ window.__ModuleLoader__.load({
               ctx.slots.register(
                 {
                   name: 'plugins.bundle.config',
-                  key: 'dsh-ok-cosmic',
+                  key: 'dsh-plugin-kdcosmicskill',
                   locale: NS,
                   inject: () => controller.inject(),
                 },
@@ -553,6 +553,6 @@ window.__ModuleLoader__.load({
       )
     }
 
-    return { name: 'ok-cosmic-client', inject, apply }
+    return { name: 'dsh-plugin-kdcosmicskill-client', inject, apply }
   },
 })

@@ -1,8 +1,6 @@
 # dsh-plugin-kdcosmicskill
 
-DeepSeek Harness（DSH）插件：金蝶云苍穹开发助手（ok-cosmic）。
-
-仓库：https://github.com/whosdead/dsh-plugin-kdcosmicskill
+插件包名：`dsh-plugin-kdcosmicskill`。Skill 名仍为 `ok-cosmic`，设置 entry id 仍为 `ok-cosmic`。
 
 把 `ok-cosmic`（金蝶云苍穹开发 Skill，原作者：陈泽贤、钱芮名）封装成 DeepSeek Harness（DSH）插件。
 
@@ -36,7 +34,7 @@ DeepSeek Harness（DSH）插件：金蝶云苍穹开发助手（ok-cosmic）。
 1. 打开 DSH 侧边栏 **Plugins**。
 2. **Add plugin**，填写本包的绝对路径，例如：
    `C:\path\to\dsh-plugin-kdcosmicskill`
-3. 安装完成后，在 **Installed** 中找到 `dsh-ok-cosmic`，确认其插件行 `ok-cosmic` 已启用。
+3. 安装完成后，在 **Installed** 中找到 `dsh-plugin-kdcosmicskill`，确认其插件行 `ok-cosmic` 已启用。
 
 ### 方式 B：交给插件管理器工具
 
@@ -51,7 +49,7 @@ plugin_manager install_bundle { target: "C:\\path\\to\\dsh-plugin-kdcosmicskill"
 设置页注册在两个位置，内容相同：
 
 - **Settings → 苍穹开发**（推荐，按分组展示）
-- **Plugins → dsh-ok-cosmic → 配置页**（bundle 配置页）
+- **Plugins → dsh-plugin-kdcosmicskill → 配置页**（bundle 配置页）
 
 保存前只暂存草稿；点击 **保存** 才会写入 profile 的 `cordis.patch.yml`。Host 会校验完整 Config，写入成功后配置热更新。
 
@@ -121,7 +119,7 @@ plugin_manager install_bundle { target: "C:\\path\\to\\dsh-plugin-kdcosmicskill"
 - `skill/setup/setup-windows.bat` / `setup-mac.sh`
 - `skill/setup/cuslib/*.jar`
 
-> 本仓库使用 Git LFS 存储 `skill/setup/` 下的二进制文件（`setup.jar`、`ok-cosmic-docs.db`、`cuslib/*.jar`）。克隆前请安装 Git LFS；直接下载 ZIP 可能只得到 LFS 指针文件，而不是实际二进制。
+> GitHub 仓库使用 Git LFS 存储 `skill/setup/` 下的二进制文件（`setup.jar`、`ok-cosmic-docs.db`、`cuslib/*.jar`）。克隆前请安装 Git LFS；直接下载 ZIP 可能只得到 LFS 指针文件，而不是实际二进制。
 
 在插件目录执行（Windows）：
 
@@ -151,3 +149,16 @@ setup-windows.bat -libpath=<苍穹 SDK JAR 目录>
 | 元数据/基础资料提示未配置统一路由 | 填写 `routeApiUrl`，或设置 `COSMIC_ROUTE_API` 环境变量（仅作为脚本兜底） |
 | 设置保存失败 | Host 会校验完整 Config；按字段提示修正。保存失败时草稿会保留 |
 | Gradle 校验超时 | 调大 `postCheckTimeoutSeconds`，或把 `postCheckGradleEnabled` 关闭后只跑静态 lint |
+
+## 开发与验证
+
+本仓库根目录的测试脚本（不属于 npm 包）：
+
+```powershell
+node --experimental-loader .\tests\test-loader.mjs .\tests\test-host.mjs
+node --experimental-loader .\tests\test-loader.mjs .\tests\test-client.mjs
+python .\tests\test-route.py
+```
+
+- Host 测试：注册 8 个工具 + Skill provider，跑通配置预检、类搜索、类详情、生成后校验，并验证修改 Config 后下一次调用立即生效。
+- Client 测试：验证 37 个字段与 Config 完全一致、两个设置页注册、设置表单可渲染。

@@ -1,6 +1,6 @@
-# dsh-ok-cosmic bundle patch.
+# dsh-plugin-kdcosmicskill bundle patch.
 # The single row below is the plugin's settings namespace: every configurable
 # value lives on this row and is edited from DSH Settings / Plugins.
 - insert:
     - id: ok-cosmic
-      name: 'dsh-ok-cosmic'
+      name: 'dsh-plugin-kdcosmicskill'

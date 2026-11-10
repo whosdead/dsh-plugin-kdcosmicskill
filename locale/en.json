@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cosmic Developer (ok-cosmic)",
-    "description": "Kingdee Cosmic development skill and query tools: API knowledge, form metadata, base data, extension points, and post-generation checks. Every parameter is editable in Settings with hot reload."
+    "title": "Cosmic Developer (dsh-plugin-kdcosmicskill)",
+    "description": "Kingdee Cosmic development skill (ok-cosmic) and query tools: API knowledge, form metadata, base data, extension points, and post-generation checks. Every parameter is editable in Settings with hot reload."
   }
 }

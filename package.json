@@ -1,6 +1,6 @@
 {
-  "name": "dsh-ok-cosmic",
-  "version": "1.0.0",
+  "name": "dsh-plugin-kdcosmicskill",
+  "version": "1.0.1",
   "private": true,
   "description": "金蝶云苍穹开发助手：ok-cosmic skill、离线 API 知识查询、表单元数据、基础资料、业务拓展点与代码校验工具，全部参数由 DSH 插件设置驱动。",
   "type": "module",

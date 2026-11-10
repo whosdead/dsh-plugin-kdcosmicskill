@@ -1,5 +1,5 @@
 /**
- * dsh-ok-cosmic host half.
+ * dsh-plugin-kdcosmicskill host half.
  *
  * Registers the eight ok-cosmic tools and the `ok-cosmic` skill provider. The
  * browser half (client.js) registers the settings page that edits the same
