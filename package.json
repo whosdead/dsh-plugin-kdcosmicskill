@@ -1,0 +1,59 @@
+{
+  "name": "dsh-ok-cosmic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "金蝶云苍穹开发助手：ok-cosmic skill、离线 API 知识查询、表单元数据、基础资料、业务拓展点与代码校验工具，全部参数由 DSH 插件设置驱动。",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "skill",
+    "locale/*.json",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible",
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "@deepseek-ai/dsh-skill": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,15 @@
+<root>
+    <!--所属云：fi=财务云、tmc=资金云、sys=系统、scm=供应链云 等-->
+    <region name="fi">
+        <!--name：队列名称（全局唯一） appid：所属应用（如 gl=总账、bei=银企互联）-->
+        <queue name="kdcd_sample_queue" appid="gl">
+            <!--class：消费者实现类全路径 concurrency：消费者线程数（一般 3~10）-->
+            <consumer class="kd.cd.xxx.biz.mq.SampleMQConsumer" concurrency="5"/>
+        </queue>
+
+        <!--同一 region 下可配置多个队列-->
+        <queue name="kdcd_another_queue" appid="gl">
+            <consumer class="kd.cd.xxx.biz.mq.AnotherMQConsumer" concurrency="3"/>
+        </queue>
+    </region>
+</root>

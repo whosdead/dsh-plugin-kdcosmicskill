@@ -1,0 +1,13 @@
+{
+  "graph": {
+    "dbPath": "/path/to/your-current-project/ok-cosmic-knowledge.db"
+  },
+  "route": {
+    "apiUrl": "",
+    "timeoutSeconds": 10
+  },
+  "extensionRepos": [
+    "/path/to/your-extension-project-1",
+    "/path/to/your-extension-project-2"
+  ]
+}

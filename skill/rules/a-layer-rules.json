@@ -1,0 +1,24 @@
+{
+  "_comment": "A 层硬约束规则 ID 列表（单一可信源）。cosmic-post-lint.py 和 post-check.md 共同引用此文件。",
+  "a_layer_rule_ids": [
+    "SCENE-001",
+    "SCENE-002",
+    "SCENE-006",
+    "SCENE-007",
+    "SCENE-008",
+    "SCENE-009",
+    "SCENE-010",
+    "SCENE-012",
+    "STYLE-009",
+    "STYLE-011",
+    "STYLE-012",
+    "STYLE-014",
+    "STYLE-015",
+    "STYLE-016",
+    "STYLE-018",
+    "STYLE-022",
+    "STYLE-023",
+    "STYLE-024",
+    "RESOURCE-004"
+  ]
+}
