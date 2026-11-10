@@ -121,6 +121,8 @@ plugin_manager install_bundle { target: "C:\\path\\to\\dsh-plugin-kdcosmicskill"
 - `skill/setup/setup-windows.bat` / `setup-mac.sh`
 - `skill/setup/cuslib/*.jar`
 
+> 本仓库使用 Git LFS 存储 `skill/setup/` 下的二进制文件（`setup.jar`、`ok-cosmic-docs.db`、`cuslib/*.jar`）。克隆前请安装 Git LFS；直接下载 ZIP 可能只得到 LFS 指针文件，而不是实际二进制。
+
 在插件目录执行（Windows）：
 
 ```bat
